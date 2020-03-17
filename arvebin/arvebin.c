@@ -55,7 +55,7 @@ nodo *inserir(nodo *raiz, nodo *z){
 	}
 	z->pai = y;
 	if (z->chave < y->chave)
-		y->esq = y;
+		y->esq = z;
 	else 
 		y->dir = z;
 	return z;
@@ -81,7 +81,7 @@ int main(){
 	for (int i = 0; i < 10; i++){
 	}
 
-    //inOrder(raiz);
+    inOrder(raiz);
 	nodo *m = minimo(raiz);
 	printf("minimo = %d\n", m->chave);
 	
